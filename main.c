@@ -1,10 +1,10 @@
-// PR¡TICA: SISTEMA DE BIBLIOTECA - PARTE 3
+// PR√ÅTICA: SISTEMA DE BIBLIOTECA - PARTE 3
 // ==============================================================================
 // OBJETIVO DESTA PARTE:
-// Modularizar o cÛdigo com funÁıes especializadas, aplicando boas pr·ticas.
-// - Passagem por valor (para exibiÁ„o) e por referÍncia (para modificaÁ„o).
-// - FunÁıes para cada funcionalidade principal do sistema.
-// - A funÁ„o main() se torna um "orquestrador", chamando as outras.
+// Modularizar o c√≥digo com fun√ß√µes especializadas, aplicando boas pr√°ticas.
+// - Passagem por valor (para exibi√ß√£o) e por refer√™ncia (para modifica√ß√£o).
+// - Fun√ß√µes para cada funcionalidade principal do sistema.
+// - A fun√ß√£o main() se torna um "orquestrador", chamando as outras.
 // ==============================================================================
 
 #include <stdio.h>
@@ -17,7 +17,7 @@
 #define MAX_EMPRESTIMOS 100
 #define TAM_STRING 100
 
-// --- DefiniÁ„o das Estruturas ---
+// --- Defini√ß√£o das Estruturas ---
 struct Livro {
     char nome[TAM_STRING];
     char autor[TAM_STRING];
@@ -40,7 +40,7 @@ void realizarEmprestimo(struct Livro *biblioteca, int totalLivros, struct Empres
 void listarEmprestimos(const struct Livro *biblioteca, const struct Emprestimo *emprestimos, int totalEmprestimos);
 void liberarMemoria(struct Livro *biblioteca, struct Emprestimo *emprestimos);
 
-// --- FunÁ„o Principal (main) ---
+// --- Fun√ß√£o Principal (main) ---
 int main() {
     setlocale(LC_ALL, "Portuguese");    // Recomendado iniciar com Western (Windows 1252)
     struct Livro *biblioteca = (struct Livro *) calloc(MAX_LIVROS, sizeof(struct Livro));
